@@ -12,7 +12,7 @@
 
   # Device Tree Support
   FILE FREEFORM = gDtPlatformDefaultDtbFileGuid {
-    SECTION RAW = Platform/Rockchip/DeviceTree/rk3588s-youyeetoo-r1-v3.dtb
+    SECTION RAW = Platform/Rockchip/DeviceTree/rk3588s-youyeetoo-r1.dtb
   }
 
   # Splash screen logo

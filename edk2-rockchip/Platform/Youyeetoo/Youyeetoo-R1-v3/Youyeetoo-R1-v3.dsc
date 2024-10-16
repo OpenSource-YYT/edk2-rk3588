@@ -6,7 +6,7 @@
 [Defines]
   PLATFORM_NAME                  = Youyeetoo-R1-v3
   PLATFORM_VENDOR                = Youyeetoo
-  PLATFORM_GUID                  = e2a11f4b-223b-4b25-8bc5-b8c56d3d54c4  # Cambia con uno GUID appropriato
+  PLATFORM_GUID                  = e2a11f4b-223b-4b25-8bc5-b8c56d3d54c4
   PLATFORM_VERSION               = 0.1
   DSC_SPECIFICATION              = 0x00010019
   OUTPUT_DIRECTORY               = Build/$(PLATFORM_NAME)
@@ -50,7 +50,7 @@
   gRockchipTokenSpaceGuid.PcdPlatformVendorName|"Youyeetoo"
   gRockchipTokenSpaceGuid.PcdFamilyName|"Youyeetoo R1"
   gRockchipTokenSpaceGuid.PcdProductUrl|"https://www.youyeetoo.com/products/youyeetoo-r1"
-  gRockchipTokenSpaceGuid.PcdDeviceTreeName|"rk3588s-youyeetoo-r1-v3"
+  gRockchipTokenSpaceGuid.PcdDeviceTreeName|"rk3588s-youyeetoo-r1"
 
   # I2C
   gRockchipTokenSpaceGuid.PcdI2cSlaveAddresses|{ 0x42, 0x43, 0x51 }
@@ -80,8 +80,8 @@
   #
   # USB/DP Combo PHY support flags and default values
   #
-  gRockchipTokenSpaceGuid.PcdUsbDpPhy0Supported|TRUE
-  gRockchipTokenSpaceGuid.PcdDp0LaneMux|{ 0x2, 0x3 }
+  gRK3588TokenSpaceGuid.PcdUsbDpPhy0Supported|TRUE
+  gRK3588TokenSpaceGuid.PcdDp0LaneMux|{ 0x2, 0x3 }
 
   #
   # GMAC
