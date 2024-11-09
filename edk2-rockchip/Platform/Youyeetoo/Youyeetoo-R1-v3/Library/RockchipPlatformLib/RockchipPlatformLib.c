@@ -19,7 +19,7 @@ static struct regulator_init_data rk806_init_data[] = {
   RK8XX_VOLTAGE_INIT(MASTER_BUCK3, 750000),
   RK8XX_VOLTAGE_INIT(MASTER_BUCK4, 750000),
   RK8XX_VOLTAGE_INIT(MASTER_BUCK5, 850000),
-  //RK8XX_VOLTAGE_INIT(MASTER_BUCK6, 750000),
+ // RK8XX_VOLTAGE_INIT(MASTER_BUCK6, 750000),
   RK8XX_VOLTAGE_INIT(MASTER_BUCK7, 2000000),
   RK8XX_VOLTAGE_INIT(MASTER_BUCK8, 3300000),
   RK8XX_VOLTAGE_INIT(MASTER_BUCK10, 1800000),
@@ -186,18 +186,16 @@ I2cIomux (
     GpioPinSetFunction(0, GPIO_PIN_PC0, 9); //i2c2_sda_m0
     break;
   case 3:
-    GpioPinSetFunction(1, GPIO_PIN_PC1, 9); //i2c3_scl_m0
-    GpioPinSetFunction(1, GPIO_PIN_PC0, 9); //i2c3_sda_m0
     break;
   case 4:
     break;
   case 5:
     break;
   case 6:
-    GpioPinSetFunction(0, GPIO_PIN_PD0, 9); //i2c6_scl_m0
-    GpioPinSetFunction(0, GPIO_PIN_PC7, 9); //i2c6_sda_m0
     break;
   case 7:
+    GpioPinSetFunction(1, GPIO_PIN_PD0, 9); //i2c7_scl_m0
+    GpioPinSetFunction(1, GPIO_PIN_PD1, 9); //i2c7_sda_m0
     break;
   default:
     break;
