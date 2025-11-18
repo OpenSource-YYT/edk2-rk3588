@@ -7,7 +7,7 @@
   PLATFORM_NAME                  = Youyeetoo-R1-v3
   PLATFORM_VENDOR                = Youyeetoo
   PLATFORM_GUID                  = e2a11f4b-223b-4b25-8bc5-b8c56d3d54c4
-  PLATFORM_VERSION               = 0.1
+  PLATFORM_VERSION               = 0.2
   DSC_SPECIFICATION              = 0x00010019
   OUTPUT_DIRECTORY               = Build/$(PLATFORM_NAME)
   VENDOR_DIRECTORY               = Platform/$(PLATFORM_VENDOR)
@@ -63,13 +63,6 @@
   gRockchipTokenSpaceGuid.PcdRtc8563Bus|0x6
 
   #
-  # CPU Performance default values
-  #
-  gRK3588TokenSpaceGuid.PcdCPULClusterClockPresetDefault|$(CPU_PERF_CLUSTER_CLOCK_PRESET_MAX)
-  gRK3588TokenSpaceGuid.PcdCPUB01ClusterClockPresetDefault|$(CPU_PERF_CLUSTER_CLOCK_PRESET_MAX)
-  gRK3588TokenSpaceGuid.PcdCPUB23ClusterClockPresetDefault|$(CPU_PERF_CLUSTER_CLOCK_PRESET_MAX)
-
-  #
   # PCIe/SATA/USB Combo PIPE PHY support flags and default values
   #
   gRK3588TokenSpaceGuid.PcdComboPhy0Switchable|FALSE
@@ -89,6 +82,14 @@
   gRK3588TokenSpaceGuid.PcdGmac1Supported|TRUE
   gRK3588TokenSpaceGuid.PcdGmac1TxDelay|0x42
 
+  #
+  # Display support flags and default values
+  #
+  gRK3588TokenSpaceGuid.PcdDisplayConnectors|{CODE({
+    VOP_OUTPUT_IF_HDMI0
+  })}
+
+
 ################################################################################
 #
 # Components Section - list of all EDK II Modules needed by this Platform.
@@ -97,6 +98,9 @@
 [Components.common]
   # ACPI Support
   $(PLATFORM_DIRECTORY)/AcpiTables/AcpiTables.inf
+
+  # Device Tree Support
+  $(PLATFORM_DIRECTORY)/DeviceTree/Vendor.inf
 
   # Splash screen logo
   $(VENDOR_DIRECTORY)/Drivers/LogoDxe/LogoDxe.inf

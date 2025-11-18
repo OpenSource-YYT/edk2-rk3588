@@ -22,7 +22,7 @@
 #define BOARD_CODEC_GPIO "\\_SB.GPI1"
 #define BOARD_CODEC_GPIO_PIN GPIO_PIN_PC0
 
-DefinitionBlock ("Dsdt.aml", "DSDT", 2, "RKCP  ", "RK3588  ", 2)
+DefinitionBlock ("Dsdt.aml", "DSDT", 2, "RKCP  ", "RK3588S", 2)
 {
   Scope (\_SB_)
   {

@@ -11,7 +11,6 @@
   MODULE_TYPE                    = BASE
   VERSION_STRING                 = 1.0
   LIBRARY_CLASS                  = RockchipPlatformLib
-  RKPLATLIB_COMMON_DIR           = Silicon/Rockchip/RK3588/Library/RockchipPlatformLibCommon
 
 [Packages]
   EmbeddedPkg/EmbeddedPkg.dec
@@ -31,4 +30,4 @@
 
 [Sources.common]
   RockchipPlatformLib.c
-  $(RKPLATLIB_COMMON_DIR)/RK3588CruLib.c
+
